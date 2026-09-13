@@ -1,0 +1,77 @@
+---
+layout: app
+title: "Progreso — Comunica 10"
+active_nav: "progress"
+---
+
+<div style="display: flex; flex-direction: column; gap: 20px;">
+  <div>
+    <h2>Tu Progreso y Evolución</h2>
+    <p class="text-xs text-muted">Métricas de hábitos, pausas y control vocal acumuladas.</p>
+  </div>
+
+  <!-- Sección 10: Mis Muletillas -->
+  <div class="card">
+    <div class="flex justify-between items-center" style="margin-bottom: 12px;">
+      <h3>Mis muletillas</h3>
+      <span class="badge badge-success" id="filler-reduction-label" style="font-size: 0.85rem; font-weight: 800;">↓ 43%</span>
+    </div>
+
+    <!-- Comparativa semanal -->
+    <div class="flex justify-between items-center text-xs" style="background: rgba(0,0,0,0.25); padding: 10px 14px; border-radius: var(--radius-sm); margin-bottom: 14px;">
+      <div>
+        <span class="text-muted">Semana anterior:</span>
+        <strong id="prev-filler-rate" style="color: #cbd5e1; margin-left: 4px;">14/min</strong>
+      </div>
+      <div style="font-size: 1.1rem;">➔</div>
+      <div>
+        <span class="text-muted">Esta semana:</span>
+        <strong id="curr-filler-rate" style="color: var(--success); margin-left: 4px;">8/min</strong>
+      </div>
+    </div>
+
+    <!-- Desglose por muletilla frecuente -->
+    <div class="text-xs text-muted" style="margin-bottom: 8px;">Frecuencia detectada esta semana:</div>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div class="flex justify-between items-center" style="background: rgba(255, 255, 255, 0.03); padding: 8px 12px; border-radius: var(--radius-sm);">
+        <span>"eh"</span>
+        <strong id="filler-eh" style="color: #fff;">37</strong>
+      </div>
+      <div class="flex justify-between items-center" style="background: rgba(255, 255, 255, 0.03); padding: 8px 12px; border-radius: var(--radius-sm);">
+        <span>"este"</span>
+        <strong id="filler-este" style="color: #fff;">22</strong>
+      </div>
+      <div class="flex justify-between items-center" style="background: rgba(255, 255, 255, 0.03); padding: 8px 12px; border-radius: var(--radius-sm);">
+        <span>"o sea"</span>
+        <strong id="filler-osea" style="color: #fff;">18</strong>
+      </div>
+      <div class="flex justify-between items-center" style="background: rgba(255, 255, 255, 0.03); padding: 8px 12px; border-radius: var(--radius-sm);">
+        <span>"entonces"</span>
+        <strong id="filler-entonces" style="color: #fff;">15</strong>
+      </div>
+    </div>
+
+    <div class="text-xs text-muted" style="margin-top: 14px; font-style: italic;">
+      💡 El objetivo no es hablar a velocidad máxima. El objetivo es hablar con control.
+    </div>
+  </div>
+
+  <!-- Sección 11: Sistema de Pausas & El Poder del Silencio -->
+  <div class="card" style="background: linear-gradient(135deg, rgba(30, 41, 69, 0.8), rgba(15, 23, 42, 0.95)); border-color: rgba(99, 102, 241, 0.3);">
+    <span class="badge badge-primary" style="margin-bottom: 8px;">Filosofía del Silencio</span>
+    <h3 style="color: #fff; margin-bottom: 6px;">El poder del silencio</h3>
+    <p class="text-xs" style="color: #cbd5e1; margin-bottom: 14px; line-height: 1.45;">
+      Una pausa consciente no es un vacío ni un error. Es una señal de dominio. El silencio genera expectación y le permite a tu mente buscar la palabra exacta.
+    </p>
+
+    <a href="mission.html?id=9" class="btn btn-secondary btn-block btn-sm" style="padding: 10px; font-size: 0.85rem;">
+      🎯 Practicar misión: El poder del silencio
+    </a>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  App.initProgressView();
+});
+</script>

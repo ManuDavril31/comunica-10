@@ -1,0 +1,93 @@
+---
+layout: app
+title: "Perfil — Comunica 10"
+active_nav: "profile"
+---
+
+<div style="display: flex; flex-direction: column; gap: 18px;">
+  <!-- Cabecera de Perfil -->
+  <div class="card text-center" style="padding: 24px 18px;">
+    <div style="width: 72px; height: 72px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 50%; margin: 0 auto 12px auto; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #fff; box-shadow: 0 4px 16px var(--primary-glow);">
+      👤
+    </div>
+    <div class="flex justify-center items-center gap-xs" style="margin-bottom: 4px;">
+      <h2 id="prof-name" style="margin: 0;">Carlos</h2>
+      <button id="btn-edit-name" class="btn btn-ghost btn-sm" title="Cambiar mi nombre" style="padding: 2px 8px; font-size: 0.8rem; border-radius: var(--radius-full);">
+        ✏️ Cambiar
+      </button>
+    </div>
+    <div class="flex justify-center gap-sm" style="margin-bottom: 12px;">
+      <span class="badge badge-primary" id="prof-level">Nivel 2</span>
+      <span class="badge badge-warning" id="prof-rank">🎙️ Comunicador</span>
+    </div>
+    <p class="text-xs text-muted" id="prof-xp">2,680 XP acumulados</p>
+  </div>
+
+  <!-- Racha actual -->
+  <div class="card flex justify-between items-center" style="background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3);">
+    <div class="flex items-center gap-md">
+      <span style="font-size: 2rem;">🔥</span>
+      <div>
+        <h4 style="color: #fbbf24;">Racha Activa</h4>
+        <p class="text-xs" style="color: #fef3c7;">Has practicado durante 7 días consecutivos.</p>
+      </div>
+    </div>
+    <span class="badge badge-warning" style="font-size: 1rem; font-weight: 800; padding: 6px 12px;">7d</span>
+  </div>
+
+  <!-- Estadísticas Históricas -->
+  <div class="card">
+    <h3 style="margin-bottom: 14px; font-size: 1rem;">Estadísticas del orador</h3>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="background: rgba(255, 255, 255, 0.03); padding: 12px; border-radius: var(--radius-sm);">
+        <span class="text-xs text-muted">Misiones realizadas</span>
+        <div id="stat-exercises" style="font-size: 1.3rem; font-weight: 800; font-family: var(--font-display); color: #fff; margin-top: 4px;">23</div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.03); padding: 12px; border-radius: var(--radius-sm);">
+        <span class="text-xs text-muted">Minutos grabados</span>
+        <div id="stat-minutes" style="font-size: 1.3rem; font-weight: 800; font-family: var(--font-display); color: #fff; margin-top: 4px;">38 min</div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.03); padding: 12px; border-radius: var(--radius-sm);">
+        <span class="text-xs text-muted">Palabras habladas</span>
+        <div id="stat-words" style="font-size: 1.3rem; font-weight: 800; font-family: var(--font-display); color: #fff; margin-top: 4px;">5,420</div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.03); padding: 12px; border-radius: var(--radius-sm);">
+        <span class="text-xs text-muted">Muletillas reducidas</span>
+        <div id="stat-fillers-reduced" style="font-size: 1.3rem; font-weight: 800; font-family: var(--font-display); color: var(--success); margin-top: 4px;">43%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ajustes y Gestión de Datos -->
+  <div class="card">
+    <h3 style="margin-bottom: 8px; font-size: 1rem;">Gestión de Progreso</h3>
+    <p class="text-xs text-muted" style="margin-bottom: 16px; line-height: 1.45;">
+      Tus datos y videos se guardan de forma 100% privada en el almacenamiento local de tu navegador.
+    </p>
+
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <button id="btn-start-clean" class="btn btn-primary btn-block text-xs" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
+        🌱 Comenzar de cero con mi progreso real (Nivel 0)
+      </button>
+
+      <button id="btn-load-demo" class="btn btn-secondary btn-block text-xs">
+        🎭 Cargar datos de demostración (Carlos, Nivel 2)
+      </button>
+
+      <button id="btn-reset-data" class="btn btn-ghost btn-block text-xs" style="color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.25);">
+        🗑️ Borrar todo el historial y videos
+      </button>
+    </div>
+
+    <a href="{{ site.baseurl }}/" class="btn btn-ghost btn-block text-xs" style="margin-top: 12px; border-top: 1px solid var(--border-subtle); padding-top: 10px;">
+      🌐 Ver Portada / Presentación Web
+    </a>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  App.initProfileView();
+});
+</script>

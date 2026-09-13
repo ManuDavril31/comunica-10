@@ -1,0 +1,24 @@
+title: "Comunica 10 — Gimnasio de Comunicación Personal"
+email: contacto@comunica10.app
+description: "Entrena todos los días para hablar con naturalidad, claridad y estructura frente a una cámara."
+baseurl: "" # Deja vacío para raíz o define el subdirectorio para GitHub Pages
+url: "https://comunica10.app"
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+permalink: :basename.html
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md

@@ -1,0 +1,142 @@
+- id: 0
+  name: "Nivel 0"
+  title: "Desbloquear la voz"
+  tagline: "Pierde el miedo y acostúmbrate al lente"
+  objective: "Hablar frente a la cámara de manera relajada sin juzgarte ni buscar la perfección."
+  targetDuration: "30 - 60 seg"
+  prepTime: 15
+  icon: "mic"
+  difficulty: "Principiante"
+  description: "El único objetivo es romper el hielo. No hay notas ni exigencia de dicción. Simplemente mira a la cámara y habla de temas cotidianos."
+  skillsFocus: ["Presencia", "Naturalidad"]
+  badge: "🧊 Rompehielos"
+
+- id: 1
+  name: "Nivel 1"
+  title: "Hablar durante 30 segundos"
+  tagline: "Mantén una idea sin abandonar"
+  objective: "Sostener una idea continua durante 30 segundos sin cortar la grabación ni rendirse."
+  targetDuration: "30 seg"
+  prepTime: 15
+  icon: "timer"
+  difficulty: "Principiante"
+  description: "Aprende a no tirar la toalla a los 10 segundos. Si te equivocas, respira y sigue adelante."
+  skillsFocus: ["Fluidez", "Control del bloqueo"]
+  badge: "⏱️ Resistencia 30s"
+
+- id: 2
+  name: "Nivel 2"
+  title: "Hablar durante 1 minuto"
+  tagline: "Respuestas con principio, cuerpo y cierre"
+  objective: "Mantener una respuesta estructurada durante aproximadamente 60 segundos."
+  targetDuration: "60 seg"
+  prepTime: 15
+  icon: "clock"
+  difficulty: "Básico"
+  description: "60 segundos es el formato de oro para redes y respuestas directas en reuniones. Desarrolla una idea completa."
+  skillsFocus: ["Estructura", "Fluidez", "Claridad"]
+  badge: "🎯 Minuto de Oro"
+
+- id: 3
+  name: "Nivel 3"
+  title: "Controlar muletillas"
+  tagline: "Sustituye 'eh', 'este' y 'o sea' por silencio"
+  objective: "Detectar y reducir muletillas automatizadas, transformándolas en pausas conscientes de 1 a 2 segundos."
+  targetDuration: "60 seg"
+  prepTime: 10
+  icon: "volume-x"
+  difficulty: "Intermedio"
+  description: "Las muletillas nacen del miedo al silencio. Aquí entrenamos el arte de hacer pausas para pensar con calma."
+  skillsFocus: ["Pausas", "Control de muletillas", "Claridad"]
+  badge: "🔇 Señor del Silencio"
+
+- id: 4
+  name: "Nivel 4"
+  title: "Pensamiento estructurado"
+  tagline: "Método PREP y esquemas mentales"
+  objective: "Exponer ideas con solidez utilizando marcos lógicos: Punto, Razón, Ejemplo y Punto (PREP)."
+  targetDuration: "90 seg"
+  prepTime: 20
+  icon: "git-merge"
+  difficulty: "Intermedio"
+  description: "Evita divagar. Aprende a anclar tus pensamientos en modelos mentales que cualquiera pueda seguir sin perderse."
+  skillsFocus: ["Estructura", "Claridad", "Argumentación"]
+  badge: "📐 Arquitecto Mental"
+
+- id: 5
+  name: "Nivel 5"
+  title: "Hablar 3–5 minutos"
+  tagline: "Desarrollo profundo sin depender de un guion"
+  objective: "Desarrollar una temática con gancho, transiciones orgánicas y conclusión memorable."
+  targetDuration: "3 - 5 min"
+  prepTime: 30
+  icon: "layers"
+  difficulty: "Intermedio-Avanzado"
+  description: "Amplía tu capacidad de retención y exposición. Sostén el hilo conductor a lo largo de varios minutos sin perder energía."
+  skillsFocus: ["Fluidez", "Estructura", "Presencia"]
+  badge: "🎙️ Expositor Firme"
+
+- id: 6
+  name: "Nivel 6"
+  title: "Improvisación"
+  tagline: "Preguntas sorpresa con solo 5 segundos de preparación"
+  objective: "Responder con firmeza a temas desconocidos sin quedarse en blanco."
+  targetDuration: "60 seg"
+  prepTime: 5
+  icon: "zap"
+  difficulty: "Avanzado"
+  description: "La cámara se enciende y la pregunta aparece. Tienes 5 segundos para arrancar. Entrena el reflejo comunicativo inmediato."
+  skillsFocus: ["Improvisación", "Pensamiento rápido", "Fluidez"]
+  badge: "⚡ Chispa Espontánea"
+
+- id: 7
+  name: "Nivel 7"
+  title: "Hablar frente a cámara"
+  tagline: "Contacto visual, energía, lenguaje corporal y ritmo"
+  objective: "Dominar la relación física con la lente: mirar al punto exacto, modular la voz y transmitir convicción."
+  targetDuration: "60 - 90 seg"
+  prepTime: 15
+  icon: "video"
+  difficulty: "Avanzado"
+  description: "No le hables a la pantalla, háblale a una persona a través de la lente. Ajusta tu energía y tu sonrisa natural."
+  skillsFocus: ["Presencia", "Lenguaje corporal", "Conexión visual"]
+  badge: "👁️ Conexión Lente"
+
+- id: 8
+  name: "Nivel 8"
+  title: "Storytelling"
+  tagline: "Historias que enganchan de principio a fin"
+  objective: "Estructurar narrativas cautivadoras: gancho inicial, contexto, conflicto, punto de giro y moraleja."
+  targetDuration: "2 min"
+  prepTime: 20
+  icon: "book-open"
+  difficulty: "Avanzado"
+  description: "Los datos informan, pero las historias transforman. Aprende a contar fracasos, aprendizajes y anécdotas memorables."
+  skillsFocus: ["Storytelling", "Emoción", "Estructura"]
+  badge: "📖 Cuentacuentos"
+
+- id: 9
+  name: "Nivel 9"
+  title: "Persuasión y comunicación avanzada"
+  tagline: "Defiende posturas, explica conceptos y convence"
+  objective: "Articular argumentos sólidos, refutar objeciones y guiar al oyente hacia una conclusión compartida."
+  targetDuration: "2 - 3 min"
+  prepTime: 25
+  icon: "shield"
+  difficulty: "Experto"
+  description: "Vende una idea, convence a un cliente escéptico o explica un concepto técnico a un niño de 8 años."
+  skillsFocus: ["Persuasión", "Claridad", "Argumentación"]
+  badge: "🏹 Persuasor Clave"
+
+- id: 10
+  name: "Nivel 10"
+  title: "Comunicación espontánea avanzada"
+  tagline: "La prueba final: 10 minutos improvisados con preguntas sorpresa"
+  objective: "Demostrar maestría total: fluidez, dicción, estructura, presencia y naturalidad durante 10 minutos seguidos."
+  targetDuration: "10 min"
+  prepTime: 30
+  icon: "award"
+  difficulty: "Maestro"
+  description: "El examen de graduación de Comunica 10. Recibes un tema complejo y preguntas aleatorias durante tu discurso."
+  skillsFocus: ["Maestría Integral", "Improvisación", "Storytelling"]
+  badge: "👑 Orador Maestro"

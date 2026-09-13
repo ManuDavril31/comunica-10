@@ -1,0 +1,109 @@
+---
+layout: app
+title: "Dashboard — Comunica 10"
+active_nav: "home"
+---
+
+<!-- Cabecera de Usuario y Nivel -->
+<section style="display: flex; flex-direction: column; gap: 14px;">
+  <div class="flex justify-between items-center">
+    <div>
+      <h2 id="user-greeting" style="font-size: 1.4rem;">Buenos días, Carlos 👋</h2>
+      <p class="text-xs text-muted" id="user-xp-badge">2,680 XP (Comunicador)</p>
+    </div>
+    <span class="badge badge-primary" id="user-level-title">Nivel 2</span>
+  </div>
+
+  <!-- Barra de Nivel actual -->
+  <div>
+    <div class="flex justify-between text-xs text-muted" style="margin-bottom: 6px;">
+      <span>Progreso hacia Nivel 3</span>
+      <span id="level-percent-label" style="font-weight: 700; color: var(--text-primary);">62%</span>
+    </div>
+    <div class="progress-track progress-lg">
+      <div id="level-progress-bar" class="progress-fill" style="width: 62%;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Tarjeta de Entrenamiento de Hoy (Misión destacada) -->
+<section>
+  <div class="card mission-highlight-card">
+    <div class="flex justify-between items-center" style="margin-bottom: 12px;">
+      <span class="mission-tag">🎯 Misión de Hoy</span>
+      <span class="badge badge-warning" id="mission-xp-bonus">+100 XP</span>
+    </div>
+
+    <h3 id="daily-mission-title" style="font-size: 1.15rem; margin-bottom: 14px; line-height: 1.35; color: #fff;">
+      Habla durante 60 segundos sobre algo valioso que aprendiste recientemente.
+    </h3>
+
+    <div class="flex justify-between items-center text-xs text-muted" style="margin-bottom: 16px; background: rgba(0, 0, 0, 0.25); padding: 10px 14px; border-radius: var(--radius-sm);">
+      <div>
+        <span>Preparación:</span>
+        <strong id="daily-mission-prep" style="color: #fff; margin-left: 4px;">15s</strong>
+      </div>
+      <div>
+        <span>Duración:</span>
+        <strong id="daily-mission-target" style="color: #fff; margin-left: 4px;">60s</strong>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 18px;">
+      <div class="text-xs text-muted" style="margin-bottom: 6px;">Habilidades que entrenas:</div>
+      <div id="daily-mission-skills" class="flex gap-sm" style="flex-wrap: wrap;">
+        <span class="badge badge-primary">Fluidez</span>
+        <span class="badge badge-primary">Estructura</span>
+        <span class="badge badge-primary">Naturalidad</span>
+      </div>
+    </div>
+
+    <a id="btn-start-mission" href="mission.html?id=17" class="btn btn-primary btn-block btn-lg pulse-primary">
+      EMPEZAR MISIÓN ⚡
+    </a>
+  </div>
+</section>
+
+<!-- Simulador de Improvisación: Pregunta Sorpresa -->
+<section>
+  <div class="card surprise-challenge-card" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(217, 70, 239, 0.12) 100%); border-color: rgba(245, 158, 11, 0.3);">
+    <div class="flex justify-between items-center" style="margin-bottom: 8px;">
+      <span class="badge badge-warning">⚡ ENTRENAMIENTO RÁPIDO</span>
+      <span class="text-xs text-muted">Solo 5s de preparación</span>
+    </div>
+    <h3 style="font-size: 1.05rem; margin-bottom: 6px; color: #fff;">
+      🎲 Simulador de Preguntas Sorpresa
+    </h3>
+    <p class="text-xs text-muted" style="margin-bottom: 12px; line-height: 1.4;">
+      Entrena para situaciones imprevistas: reuniones de trabajo, entrevistas o networking. Te damos 5 segundos para arrancar a hablar sin guion.
+    </p>
+    <a id="btn-surprise-mode" href="#" class="btn btn-secondary btn-block">
+      LANZAR RETO SORPRESA ⚡
+    </a>
+  </div>
+</section>
+
+<!-- Resumen de Progreso Visual -->
+<section>
+  <div class="flex justify-between items-center" style="margin-bottom: 12px;">
+    <h3>Tu progreso</h3>
+    <a href="progress.html" class="text-xs text-primary" style="font-weight: 600;">Ver análisis completo →</a>
+  </div>
+
+  <div class="card">
+    <div id="user-skills-summary" class="skills-grid">
+      <!-- Inyectado dinámicamente por App.initDashboard() -->
+    </div>
+
+    <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
+      <span class="text-xs text-muted">Muletillas promedio:</span>
+      <span class="badge badge-warning" style="font-weight: 700;">8 / min (↓ 43%)</span>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  App.initDashboard();
+});
+</script>

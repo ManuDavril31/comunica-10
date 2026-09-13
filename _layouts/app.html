@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>{{ page.title | default: "Comunica 10 — Gimnasio de Comunicación" }}</title>
+  <meta name="description" content="Entrena tu capacidad de hablar frente a la cámara de celular con naturalidad y estructura.">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎙️</text></svg>">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/tokens.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/components.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/animations.css">
+</head>
+<body>
+  <div class="app-viewport">
+    {% unless page.hide_header %}
+      {% include header.html %}
+    {% endunless %}
+
+    <main class="view-content {% if page.hide_nav %}no-nav{% endif %}">
+      {{ content }}
+    </main>
+
+    {% unless page.hide_nav %}
+      {% include bottom-nav.html %}
+    {% endunless %}
+  </div>
+
+  <!-- Scripts modulares -->
+  <script src="{{ site.baseurl }}/assets/js/storage.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/data.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/recorder.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/analyzer.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/gamification.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/app.js"></script>
+  {% if page.page_script %}
+    <script>{{ page.page_script }}</script>
+  {% endif %}
+</body>
+</html>

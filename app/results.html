@@ -1,0 +1,137 @@
+---
+layout: app
+title: "Resultados — Comunica 10"
+hide_nav: true
+---
+
+<div class="animate-fade-in" style="display: flex; flex-direction: column; gap: 16px;">
+  <!-- Título principal -->
+  <div class="text-center">
+    <div style="font-size: 2.5rem; margin-bottom: 6px;">🎉</div>
+    <h1 style="font-size: 1.6rem; margin-bottom: 4px;">¡Misión completada!</h1>
+    <p class="text-xs text-success" style="font-weight: 700;">+170 XP ganados hoy</p>
+  </div>
+
+  <!-- Reproductor de video grabado del intento -->
+  <div id="result-video-container" class="card" style="display: none; padding: 12px; background: #0f172a; border-color: rgba(99, 102, 241, 0.3);">
+    <div class="flex justify-between items-center" style="margin-bottom: 8px;">
+      <span class="text-xs" style="font-weight: 700; color: #a5b4fc;">🎥 TU GRABACIÓN EN VIDEO</span>
+      <a id="btn-download-video" href="#" class="btn btn-ghost btn-sm" style="font-size: 0.75rem; padding: 2px 8px; min-height: 28px;">
+        ⬇ Descargar
+      </a>
+    </div>
+    <div class="video-preview-wrapper" style="border-radius: var(--radius-sm); overflow: hidden; background: #000;">
+      <video id="result-video-player" controls playsinline style="width: 100%; max-height: 300px; display: block; object-fit: contain; margin: 0 auto;"></video>
+    </div>
+    <p class="text-xs text-muted" style="margin-top: 8px; text-align: center;">
+      Obsérvate sin juzgarte: mira si mantuviste contacto visual y si gesticulaste con soltura.
+    </p>
+  </div>
+
+  <!-- Duración vs Objetivo -->
+  <div class="card flex justify-between items-center" style="background: rgba(0, 0, 0, 0.25); padding: 12px 18px;">
+    <div>
+      <span class="text-xs text-muted">Duración:</span>
+      <strong id="res-duration" style="font-size: 1.15rem; color: #fff; margin-left: 6px;">01:07</strong>
+    </div>
+    <div style="border-left: 1px solid var(--border-subtle); height: 24px;"></div>
+    <div>
+      <span class="text-xs text-muted">Objetivo:</span>
+      <strong id="res-objective" style="font-size: 1.15rem; color: var(--text-secondary); margin-left: 6px;">01:00</strong>
+    </div>
+  </div>
+
+  <!-- Desglose de Métricas de IA -->
+  <div class="card">
+    <h3 style="margin-bottom: 12px; font-size: 1rem;">Tu análisis</h3>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px;">
+      <div style="background: rgba(255, 255, 255, 0.03); padding: 10px; border-radius: var(--radius-sm);">
+        <span class="text-xs text-muted">Fluidez</span>
+        <div id="m-fluency" style="font-size: 1.25rem; font-weight: 800; font-family: var(--font-display); color: #818cf8;">7.2/10</div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.03); padding: 10px; border-radius: var(--radius-sm);">
+        <span class="text-xs text-muted">Claridad</span>
+        <div id="m-clarity" style="font-size: 1.25rem; font-weight: 800; font-family: var(--font-display); color: #38bdf8;">6.8/10</div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.03); padding: 10px; border-radius: var(--radius-sm);">
+        <span class="text-xs text-muted">Estructura</span>
+        <div id="m-structure" style="font-size: 1.25rem; font-weight: 800; font-family: var(--font-display); color: #a78bfa;">5.9/10</div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.03); padding: 10px; border-radius: var(--radius-sm);">
+        <span class="text-xs text-muted">Naturalidad</span>
+        <div id="m-naturalness" style="font-size: 1.25rem; font-weight: 800; font-family: var(--font-display); color: #34d399;">7.4/10</div>
+      </div>
+    </div>
+
+    <!-- Indicadores cuantitativos -->
+    <div style="display: flex; justify-content: space-between; border-top: 1px solid var(--border-subtle); padding-top: 12px; font-size: 0.8rem;">
+      <div>
+        <span class="text-muted">Muletillas:</span>
+        <strong id="m-fillers" style="color: var(--warning); margin-left: 4px;">8</strong>
+      </div>
+      <div>
+        <span class="text-muted">Pausas largas:</span>
+        <strong id="m-pauses" style="color: #fff; margin-left: 4px;">4</strong>
+      </div>
+      <div>
+        <span class="text-muted">Velocidad:</span>
+        <strong id="m-wpm" style="color: #fff; margin-left: 4px;">154 ppm</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transcripción con muletillas detectadas -->
+  <div id="transcript-box" class="card" style="display: none; background: rgba(15, 23, 42, 0.9);">
+    <div class="flex justify-between items-center" style="margin-bottom: 8px;">
+      <h4 style="font-size: 0.95rem; color: #fff; margin: 0;">🎙️ Transcripción y Muletillas</h4>
+      <div class="flex gap-2 text-xs text-muted">
+        <span id="transcript-words" class="badge">0 palabras</span>
+        <span id="transcript-wpm" class="badge badge-primary">0 PPM</span>
+      </div>
+    </div>
+    <p class="text-xs text-muted" style="margin-bottom: 10px;">
+      Términos resaltados en <mark class="filler-tag">rojo</mark> indican momentos donde rellenaste el silencio con una muletilla.
+    </p>
+    <div id="transcript-html" class="transcript-content-box">
+      <!-- Transcripción insertada dinámicamente -->
+    </div>
+  </div>
+
+  <!-- Lo hiciste bien -->
+  <div class="card" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.25);">
+    <h4 style="color: #34d399; margin-bottom: 8px;">Lo hiciste bien</h4>
+    <ul id="strengths-list" style="list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 0.88rem; color: #e2e8f0;">
+      <!-- Rellenado por JS -->
+    </ul>
+  </div>
+
+  <!-- Tu principal oportunidad -->
+  <div class="card" style="background: rgba(245, 158, 11, 0.08); border-color: rgba(245, 158, 11, 0.25);">
+    <h4 style="color: #fbbf24; margin-bottom: 8px;">Tu principal oportunidad</h4>
+    <p id="opportunity-text" style="font-size: 0.88rem; color: #fef3c7; line-height: 1.45;">
+      Utilizaste demasiadas muletillas al buscar palabras. En lugar de decir "ehhh...", prueba hacer una pausa de 1 a 2 segundos.
+    </p>
+  </div>
+
+  <!-- Acciones y Repetición -->
+  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 6px;">
+    <a id="btn-retry-mission" href="#" class="btn btn-primary btn-block btn-lg">
+      🔄 VOLVER A INTENTAR (INTENTO 2)
+    </a>
+    
+    <a id="btn-view-comparison" href="#" class="btn btn-secondary btn-block" style="display: none;">
+      📊 VER COMPARACIÓN DE INTENTOS
+    </a>
+
+    <a href="index.html" class="btn btn-ghost btn-block text-sm">
+      Volver al Inicio
+    </a>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  App.initResultsView();
+});
+</script>

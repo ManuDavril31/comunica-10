@@ -1,0 +1,53 @@
+- id: "fluidez"
+  name: "Fluidez"
+  icon: "wind"
+  description: "Capacidad de encadenar ideas sin bloqueos, tartamudeos ni silencios angustiosos."
+  defaultScore: 6.4
+
+- id: "claridad"
+  name: "Claridad"
+  icon: "sun"
+  description: "Facilidad con la que el oyente capta el núcleo de tu mensaje sin ambigüedades."
+  defaultScore: 7.1
+
+- id: "estructura"
+  name: "Estructura"
+  icon: "layout"
+  description: "Uso de introducciones claras, desarrollo lógico y conclusiones memorables."
+  defaultScore: 5.8
+
+- id: "naturalidad"
+  name: "Naturalidad"
+  icon: "smile"
+  description: "Autenticidad al hablar, tono conversacional sin sonar ensayado ni robótico."
+  defaultScore: 7.4
+
+- id: "muletillas"
+  name: "Control de Muletillas"
+  icon: "slash"
+  description: "Habilidad para silenciar 'eh', 'este', 'o sea' y reemplazarlos por pausas limpias."
+  defaultScore: 5.2
+
+- id: "improvisacion"
+  name: "Improvisación"
+  icon: "zap"
+  description: "Capacidad de responder ante temas inesperados sin quedarse en blanco."
+  defaultScore: 4.9
+
+- id: "presencia"
+  name: "Presencia en Cámara"
+  icon: "video"
+  description: "Contacto visual con la lente, postura erguida y lenguaje corporal congruente."
+  defaultScore: 6.1
+
+- id: "storytelling"
+  name: "Storytelling"
+  icon: "book-open"
+  description: "Creación de ganchos emocionales, curvas de tensión y resolución con moraleja."
+  defaultScore: 3.2
+
+- id: "persuasion"
+  name: "Persuasión"
+  icon: "shield"
+  description: "Capacidad de argumentar con lógica, derribar objeciones y mover a la acción."
+  defaultScore: 4.5

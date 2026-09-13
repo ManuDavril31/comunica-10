@@ -1,0 +1,23 @@
+---
+layout: app
+title: "Entrenamiento — Comunica 10"
+active_nav: "train"
+---
+
+<section>
+  <div style="margin-bottom: 18px;">
+    <h2>Gimnasio de Niveles</h2>
+    <p class="text-xs text-muted">Avanza del Nivel 0 al Nivel 10 completando misiones prácticas.</p>
+  </div>
+
+  <!-- Lista dinámica de niveles -->
+  <div id="levels-list">
+    <!-- Renderizado por App.initTrainView() -->
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  App.initTrainView();
+});
+</script>

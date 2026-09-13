@@ -1,0 +1,65 @@
+<div class="camera-stage" id="camera-stage">
+  <!-- Video stream element (Webcam) -->
+  <video id="camera-stream" class="video-stream" playsinline autoplay muted></video>
+
+  <!-- Botón flotante para alternar Teleprónter Mental -->
+  <button type="button" class="teleprompter-toggle-btn" id="btn-toggle-teleprompter" title="Mostrar/ocultar guía de estructura mental">
+    🧠 Guía de Estructura
+  </button>
+
+  <!-- Tarjeta flotante de Teleprónter / Esquema Mental -->
+  <div class="teleprompter-card" id="teleprompter-card" style="display: none;">
+    <div class="teleprompter-header">
+      <span class="teleprompter-title">Esquema Mental Guía</span>
+      <button type="button" class="teleprompter-close" id="btn-close-teleprompter">✕</button>
+    </div>
+    <div class="teleprompter-body" id="teleprompter-content">
+      <div class="teleprompter-step"><strong>1. Punto:</strong> Di tu mensaje central en 1 frase directa.</div>
+      <div class="teleprompter-step"><strong>2. Razón / Ejemplo:</strong> Comparte un caso o motivo claro.</div>
+      <div class="teleprompter-step"><strong>3. Cierre:</strong> Remata con tu conclusión firme.</div>
+    </div>
+  </div>
+
+  <!-- Overlay de Preparación (15s o 5s) -->
+  <div class="prep-overlay" id="prep-overlay">
+    <div style="margin-bottom: 8px;">
+      <span class="badge badge-warning">Tiempo de Preparación</span>
+    </div>
+    <div class="prep-countdown-circle" id="prep-seconds">15</div>
+    <p class="text-sm" style="color: #cbd5e1; max-width: 280px; margin-bottom: 20px;">
+      Respira hondo. Estructura mentalmente tu respuesta.
+    </p>
+    <button class="btn btn-secondary btn-sm" id="btn-skip-prep">
+      ⚡ Saltar e Iniciar Ya
+    </button>
+  </div>
+
+  <!-- HUD de Grabación Activa -->
+  <div class="recording-hud" id="hud-recording" style="display: none;">
+    <div class="rec-badge">
+      <div class="rec-dot"></div>
+      <span>GRABANDO</span>
+    </div>
+    <div class="timer-display" id="recording-timer-counter">
+      00:00
+    </div>
+  </div>
+
+  <!-- Indicador sutil de voz en tiempo real -->
+  <div class="live-speech-pill" id="live-speech-pill" style="display: none;">
+    <span class="speech-pulse-dot"></span>
+    <span id="live-speech-label">Detectando voz...</span>
+  </div>
+
+  <!-- Visualizador dinámico de audio (micrófono en vivo) -->
+  <div class="audio-visualizer" id="audio-visualizer">
+    <div class="audio-bar"></div>
+    <div class="audio-bar"></div>
+    <div class="audio-bar"></div>
+    <div class="audio-bar"></div>
+    <div class="audio-bar"></div>
+    <div class="audio-bar"></div>
+    <div class="audio-bar"></div>
+    <div class="audio-bar"></div>
+  </div>
+</div>

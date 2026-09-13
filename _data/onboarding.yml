@@ -1,0 +1,65 @@
+steps:
+  - id: 1
+    title: "¿Qué quieres conseguir?"
+    subtitle: "Personalizaremos tus ejercicios según tu ambición principal."
+    options:
+      - id: "perder-miedo"
+        title: "Perder el miedo a hablar"
+        desc: "Dejar de paralizarme y sentirme cómodo frente al lente"
+        icon: "shield-check"
+      - id: "hablar-camara"
+        title: "Hablar con soltura frente a cámara"
+        desc: "Grabar vídeos naturales para reuniones o redes sociales"
+        icon: "video"
+      - id: "improvisacion"
+        title: "Mejorar mi improvisación"
+        desc: "Responder preguntas difíciles al instante sin dudar"
+        icon: "zap"
+      - id: "crear-contenido"
+        title: "Crear contenido para redes"
+        desc: "Hablar fluido en TikTok, YouTube, Instagram o LinkedIn"
+        icon: "share-2"
+      - id: "hablar-mejor"
+        title: "Hablar mejor en mi trabajo"
+        desc: "Estructurar mis ideas en juntas, llamadas y presentaciones"
+        icon: "briefcase"
+
+  - id: 2
+    title: "¿Cuál sientes que es tu nivel actual?"
+    subtitle: "Sé honesto; el gimnasio te llevará paso a paso."
+    options:
+      - id: "principiante"
+        title: "Principiante"
+        desc: "Me bloqueo con facilidad y evito encender la cámara"
+        level: 0
+      - id: "intermedio"
+        title: "Intermedio"
+        desc: "Puedo hablar pero uso muchas muletillas y me voy por las ramas"
+        level: 1
+      - id: "avanzado"
+        title: "Avanzado"
+        desc: "Tengo soltura pero quiero dominar storytelling y persuasión"
+        level: 2
+
+  - id: 3
+    title: "¿Cuánto tiempo puedes practicar al día?"
+    subtitle: "La consistencia supera con creces la intensidad esporádica."
+    options:
+      - id: "5min"
+        title: "5 minutos al día"
+        desc: "1 ejercicio diario — Ideal para arrancar el hábito"
+        recommended: true
+      - id: "10min"
+        title: "10 minutos al día"
+        desc: "2 misiones con repetición de mejora"
+      - id: "15min"
+        title: "15 minutos al día"
+        desc: "Entrenamiento intensivo de oratoria"
+      - id: "30min"
+        title: "30 minutos al día"
+        desc: "Modo inmersión total para retos inminentes"
+
+  - id: 4
+    title: "¡Tu gimnasio de comunicación está listo!"
+    subtitle: "Menos teoría, más práctica. Tu primera misión de desbloqueo te espera."
+    cta: "EMPEZAR NIVEL 0"

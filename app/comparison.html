@@ -1,0 +1,111 @@
+---
+layout: app
+title: "Comparación de Intentos — Comunica 10"
+hide_nav: true
+---
+
+<div class="animate-fade-in" style="display: flex; flex-direction: column; gap: 16px;">
+  <!-- Cabecera -->
+  <div class="flex justify-between items-center">
+    <a href="index.html" class="btn btn-ghost" style="padding: 4px 8px; min-height: 32px; font-size: 0.85rem;">
+      ✕ Cerrar
+    </a>
+    <span class="badge badge-primary">Evolución en la Misión</span>
+  </div>
+
+  <div class="text-center" style="margin: 8px 0;">
+    <h1 style="font-size: 1.5rem; margin-bottom: 6px;">Tu evolución</h1>
+    <div id="comparison-improvement-percent" class="badge badge-success" style="font-size: 0.95rem; padding: 8px 16px; font-weight: 800;">
+      ¡Mejoraste un 23% en esta misión! 🎉
+    </div>
+  </div>
+
+  <div id="no-comparison-alert" class="card" style="display: none; text-align: center;">
+    <p class="text-sm text-warning">Realiza al menos 2 intentos en esta misión para comparar tus resultados.</p>
+  </div>
+
+  <!-- Comparativa en Video: Intento 1 vs Intento 2 -->
+  <div id="comparison-videos-container" class="card" style="display: none; padding: 14px; background: rgba(15, 23, 42, 0.95); border-color: rgba(99, 102, 241, 0.3);">
+    <h3 style="font-size: 0.95rem; color: #fff; margin-bottom: 12px; text-align: center;">
+      🎥 Observa tu cambio físico y de presencia
+    </h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+      <div style="text-align: center;">
+        <span class="badge" style="margin-bottom: 6px; display: inline-block; font-size: 0.75rem;">Intento 1</span>
+        <div style="border-radius: var(--radius-sm); overflow: hidden; background: #000; border: 1px solid var(--border-subtle);">
+          <video id="comp-video-1" controls playsinline style="width: 100%; height: 160px; object-fit: contain; display: block;"></video>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <span class="badge badge-warning" style="margin-bottom: 6px; display: inline-block; font-size: 0.75rem;">Intento 2</span>
+        <div style="border-radius: var(--radius-sm); overflow: hidden; background: #000; border: 1px solid rgba(245, 158, 11, 0.4);">
+          <video id="comp-video-2" controls playsinline style="width: 100%; height: 160px; object-fit: contain; display: block;"></video>
+        </div>
+      </div>
+    </div>
+    <p class="text-xs text-muted" style="margin-top: 10px; text-align: center;">
+      Compara cómo en el Intento 2 parpadeas menos, respiras con más calma y miras directo al lente.
+    </p>
+  </div>
+
+  <!-- Tabla de comparación visual -->
+  <div class="comparison-container">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Métrica</th>
+          <th>Intento 1</th>
+          <th>Intento 2</th>
+          <th>Cambio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="row-fluency">
+          <td><strong>Fluidez</strong></td>
+          <td class="val-a1">5.8</td>
+          <td class="val-a2">7.2</td>
+          <td class="val-diff diff-positive">+1.4</td>
+        </tr>
+        <tr id="row-clarity">
+          <td><strong>Claridad</strong></td>
+          <td class="val-a1">6.2</td>
+          <td class="val-a2">6.8</td>
+          <td class="val-diff diff-positive">+0.6</td>
+        </tr>
+        <tr id="row-structure">
+          <td><strong>Estructura</strong></td>
+          <td class="val-a1">4.9</td>
+          <td class="val-a2">5.9</td>
+          <td class="val-diff diff-positive">+1.0</td>
+        </tr>
+        <tr id="row-fillers">
+          <td><strong>Muletillas</strong></td>
+          <td class="val-a1">14</td>
+          <td class="val-a2">8</td>
+          <td class="val-diff diff-positive">-6</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Mensaje pedagógico del entrenador -->
+  <div class="card" style="background: rgba(99, 102, 241, 0.08); border-color: var(--border-accent);">
+    <h4 style="color: #fff; margin-bottom: 6px;">El poder de la repetición deliberada</h4>
+    <p class="text-xs" style="color: #cbd5e1; line-height: 1.45;">
+      La primera grabación libera la tensión del tema; la segunda permite a tu cerebro aplicar estructura y pausas.
+      Esta es la razón por la que la repetición es la clave del gimnasio.
+    </p>
+  </div>
+
+  <div style="margin-top: 8px;">
+    <a href="index.html" class="btn btn-primary btn-block btn-lg">
+      CONTINUAR AL DASHBOARD 🚀
+    </a>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  App.initComparisonView();
+});
+</script>
